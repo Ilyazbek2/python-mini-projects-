@@ -1,0 +1,17 @@
+import string
+
+text = "Python is great, and Python is easy to learn!"
+
+text = text.lower()
+text = text.translate(str.maketrans("", "", string.punctuation))
+
+words = text.split()
+frequency = {}
+
+for word in words:
+    frequency[word] = frequency.get(word, 0) + 1
+
+top_words = sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:3]
+
+print("Word Frequencies:", frequency)
+print("Top 3 Words:", top_words)
