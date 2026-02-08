@@ -1,0 +1,18 @@
+movies = {
+    "Inception": [5, 4, 5, 5],
+    "Interstellar": [5, 5, 4, 5],
+    "Tenet": [4, 3, 4]
+}
+
+averages = {}
+
+for movie, ratings in movies.items():
+    averages[movie] = sum(ratings) / len(ratings)
+
+highest_movie = max(averages, key=averages.get)
+
+sorted_movies = sorted(averages.items(), key=lambda x: x[1], reverse=True)
+
+print("Average Ratings:", averages)
+print("Highest Rated Movie:", highest_movie)
+print("Movies Sorted by Rating:", sorted_movies)
