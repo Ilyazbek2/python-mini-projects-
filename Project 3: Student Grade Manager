@@ -1,0 +1,19 @@
+students = {
+    "Alice": [90, 85, 92],
+    "Bob": [70, 68, 75],
+    "Charlie": [88, 90, 85]
+}
+
+for name, scores in students.items():
+    avg = sum(scores) / len(scores)
+
+    if avg >= 90:
+        grade = "A"
+    elif avg >= 80:
+        grade = "B"
+    elif avg >= 70:
+        grade = "C"
+    else:
+        grade = "F"
+
+    print(f"{name}: Average = {avg:.2f}, Grade = {grade}")
