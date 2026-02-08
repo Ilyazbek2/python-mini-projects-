@@ -1,0 +1,19 @@
+expenses = {
+    "Food": [10, 15, 20],
+    "Transport": [5, 7, 10],
+    "Entertainment": [30, 20]
+}
+
+total = 0
+category_totals = {}
+
+for category, costs in expenses.items():
+    category_total = sum(costs)
+    category_totals[category] = category_total
+    total += category_total
+
+highest_category = max(category_totals, key=category_totals.get)
+
+print("Total Spending:", total)
+print("Spending by Category:", category_totals)
+print("Highest Expense Category:", highest_category)
